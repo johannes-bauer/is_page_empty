@@ -7,7 +7,7 @@ packages = ["src/is_page_empty"]
 
 [project]
 name = "is-page-empty"
-version = "1.0.3"
+version = "1.0.4"
 description = "A very simple script that tests whether an image is likely empty."
 readme = "README.md"
 requires-python = ">=3.10"
