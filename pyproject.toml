@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/is_page_empty"]
+
+[project]
+name = "is-page-empty"
+version = "1.0.0"
+description = "A very simple script that tests whether an image is likely empty."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+authors = [{name = "Johannes Bauer", email = "atomm-clap@interesting-problems.de"}]
+keywords = ["cli", "argument-parser", "subcommands"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/johannes-bauer/is_page_empty"
+
+[project.optional-dependencies]
+skimage = ["scikit-image>=0.20.0"]
+imageio = ["ImageIO>=2.0.0"]
+pil = ["pillow>=12.0.0", "numpy>=2.2"]
+
+[project.scripts]
+is_page_empty = "is_page_empty:main"
